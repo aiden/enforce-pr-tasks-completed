@@ -21,11 +21,11 @@ module.exports = robot => {
         context.repo({
           sha: context.payload.pull_request.head.sha,
           state: status,
-          target_url: "https://github.com/settings/apps/task-list-zero",
+          target_url: "https://github.com/apps/enforce-pr-tasks-completed",
           description: status
             ? "task list not completed yet"
             : "ready for the next steps",
-          context: "Task List Zero"
+          context: "Enforce PR Tasks Completed"
         })
       );
     }
